@@ -1,0 +1,138 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-box {
+    flex-basis: 33.33%;
+    background-color: #fafafa;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.project-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-box h2 {
+    font-size: 1.2em;
+    /* Tamanho do título */
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 1em;
+    /* Tamanho do texto */
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .project-box h2 {
+        font-size: 1em;
+        /* Reduz o tamanho do título em dispositivos menores */
+    }
+
+    .project-box p {
+        font-size: 0.9em;
+        /* Reduz o tamanho do texto em dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-box h2 {
+        font-size: 0.9em;
+        /* Reduz ainda mais o tamanho do título em dispositivos ainda menores */
+    }
+
+    .project-box p {
+        font-size: 0.8em;
+        /* Reduz ainda mais o tamanho do texto em dispositivos ainda menores */
+    }
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.dark-mode-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.project-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .title,
+.dark-mode .subtitle {
+    color: #fff;
+}
+
+.dark-mode .project-box {
+    background-color: #4d4d4d;
+}
+
+.project-box a {
+    color: #007bff;
+    /* Cor padrão das âncoras */
+    text-decoration: none;
+}
+
+.dark-mode .project-box a {
+    color: #989c9f;
+    /* Cor das âncoras no modo escuro */
+}
+
+.project-box a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode .project-box a:hover {
+    color: #fff;
+    /* Cor das âncoras no modo escuro ao passar o mouse */
+}

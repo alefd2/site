@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/fe9040bb06.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <style>
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Meu Portfólio</h1>
+            <p class="subtitle">Desenvolvedor Web</p>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <i class="fas fa-sun"></i> <!-- Ícone do Light Mode -->
+                <i class="fas fa-moon"></i> <!-- Ícone do Dark Mode -->
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="projects">
+            <div class="projects loading"> <!-- Elemento de loading -->
+
+                <?php include 'php/fetch-projects.php'; ?>
+            </div>
+        </div>
+
+        <script src="assets/js/fetch-projects.js"></script>
+</body>
+
+</html>
