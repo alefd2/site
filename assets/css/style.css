@@ -8,72 +8,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-box {
-    flex-basis: 33.33%;
-    background-color: #fafafa;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px;
-}
-
-.project-box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-box h2 {
-    font-size: 1.2em;
-    /* Tamanho do título */
-    margin-bottom: 10px;
-}
-
-.project-box p {
-    font-size: 1em;
-    /* Tamanho do texto */
-    margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .project-box h2 {
-        font-size: 1em;
-        /* Reduz o tamanho do título em dispositivos menores */
-    }
-
-    .project-box p {
-        font-size: 0.9em;
-        /* Reduz o tamanho do texto em dispositivos menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-box h2 {
-        font-size: 0.9em;
-        /* Reduz ainda mais o tamanho do título em dispositivos ainda menores */
-    }
-
-    .project-box p {
-        font-size: 0.8em;
-        /* Reduz ainda mais o tamanho do texto em dispositivos ainda menores */
-    }
 }
 
 .header {
@@ -97,6 +35,21 @@ body {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.project-box {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border-radius: 12px;
+    /* Adiciona o border-radius */
 }
 
 .project-box:hover {
@@ -135,4 +88,120 @@ body {
 .dark-mode .project-box a:hover {
     color: #fff;
     /* Cor das âncoras no modo escuro ao passar o mouse */
+}
+
+
+/* Estilos da barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Largura da barra de rolagem */
+    background-color: #333;
+    /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilos do polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #006400;
+    /* Cor do polegar da barra de rolagem */
+    border-radius: 8px;
+    /* Formato circular do polegar */
+}
+
+/* Estilos do polegar da barra de rolagem ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #004000;
+    /* Cor do polegar da barra de rolagem ao passar o mouse */
+}
+
+/* Background da barra de rolagem */
+::-webkit-scrollbar-track {
+    width: 8px;
+    background-color: #dddddd;
+    /* Cor de fundo do background */
+}
+
+/* MOdal */
+
+
+/* Estilos padrão do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+}
+
+.about-me h2 {
+    font-size: 3rem;
+    margin-bottom: 1%;
+}
+
+.about-me p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+
+/* Estilos para o tema escuro */
+.dark-mode .modal-content {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .close {
+    color: #ddd;
+}
+
+.technologies {
+    background-color: #f2f2f2;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.technologies h3 {
+    font-size: 20px;
+}
+
+.technologies ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.technologies li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.technologies i {
+    margin-right: 5px;
 }
